@@ -29,7 +29,10 @@ jobs:
       
       # create PR
       - name: Create Pull Request
-        uses: quangvo09/pull-request-action@v1
+        uses: repo-sync/pull-request@v2
         with:
-          branch_prefix: feature
-          base_branch: master
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          destination_branch: "master"
+          pr_draft: true
+          pr_allow_empty: true
+          pr_title: "${{ github.ref_name }}"
