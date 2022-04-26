@@ -35,4 +35,4 @@ jobs:
           destination_branch: "master"
           pr_draft: true
           pr_allow_empty: true
-          pr_title: "${{ github.ref }}"
+          pr_title: "${{ github.ref_name }}"
