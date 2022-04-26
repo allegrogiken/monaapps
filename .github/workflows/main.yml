@@ -29,6 +29,7 @@ jobs:
       
       # create PR
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v4
+        uses: quangvo09/pull-request-action@v1
         with:
-          base: master
+          branch_prefix: feature
+          base_branch: master
